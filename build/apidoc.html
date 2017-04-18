@@ -72,42 +72,6 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.uuid.bytesToUuid">
-            function <span class="apidocSignatureSpan">uuid.</span>bytesToUuid
-            <span class="apidocSignatureSpan">(buf, offset)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.uuid.rng">
-            function <span class="apidocSignatureSpan">uuid.</span>rng
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.uuid.rng_browser">
-            function <span class="apidocSignatureSpan">uuid.</span>rng_browser
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.uuid.toString">
-            function <span class="apidocSignatureSpan">uuid.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
             <a class="apidocElementLiA" href="#apidoc.element.uuid.v1">
             function <span class="apidocSignatureSpan">uuid.</span>v1
             <span class="apidocSignatureSpan">(options, buf, offset)</span>
@@ -126,64 +90,21 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.uuid.bytesToUuid">module uuid.bytesToUuid</a><ol>
+    <li class="apidocModuleLi"><a href="#apidoc.module.uuid.v4">module uuid.v4</a><ol>
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.uuid.bytesToUuid.bytesToUuid">
-            function <span class="apidocSignatureSpan">uuid.</span>bytesToUuid
-            <span class="apidocSignatureSpan">(buf, offset)</span>
+            <a class="apidocElementLiA" href="#apidoc.element.uuid.v4.v4">
+            function <span class="apidocSignatureSpan">uuid.</span>v4
+            <span class="apidocSignatureSpan">(options, buf, offset)</span>
             </a>
 
         </li>
 
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.uuid.rng">module uuid.rng</a><ol>
-
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.uuid.rng.rng">
-            function <span class="apidocSignatureSpan">uuid.</span>rng
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.uuid.rng_browser">module uuid.rng_browser</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.uuid.rng_browser.rng_browser">
-            function <span class="apidocSignatureSpan">uuid.</span>rng_browser
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.uuid.toString">module uuid.toString</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.uuid.toString.toString">
-            function <span class="apidocSignatureSpan">uuid.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.uuid.v1">module uuid.v1</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.uuid.v1.v1">
-            function <span class="apidocSignatureSpan">uuid.</span>v1
+            <a class="apidocElementLiA" href="#apidoc.element.uuid.v4.v1">
+            function <span class="apidocSignatureSpan">uuid.v4.</span>v1
             <span class="apidocSignatureSpan">(options, buf, offset)</span>
             </a>
 
@@ -229,96 +150,6 @@
   return buf || bytesToUuid(rnds);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.uuid.bytesToUuid" id="apidoc.element.uuid.bytesToUuid">
-        function <span class="apidocSignatureSpan">uuid.</span>bytesToUuid
-        <span class="apidocSignatureSpan">(buf, offset)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function bytesToUuid(buf, offset) {
-  var i = offset || 0;
-  var bth = byteToHex;
-  return  bth[buf[i++]] + bth[buf[i++]] +
-          bth[buf[i++]] + bth[buf[i++]] + &#x27;-&#x27; +
-          bth[buf[i++]] + bth[buf[i++]] + &#x27;-&#x27; +
-          bth[buf[i++]] + bth[buf[i++]] + &#x27;-&#x27; +
-          bth[buf[i++]] + bth[buf[i++]] + &#x27;-&#x27; +
-          bth[buf[i++]] + bth[buf[i++]] +
-          bth[buf[i++]] + bth[buf[i++]] +
-          bth[buf[i++]] + bth[buf[i++]];
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.uuid.rng" id="apidoc.element.uuid.rng">
-        function <span class="apidocSignatureSpan">uuid.</span>rng
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function rng() {
-  return rb(16);
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.uuid.rng_browser" id="apidoc.element.uuid.rng_browser">
-        function <span class="apidocSignatureSpan">uuid.</span>rng_browser
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">rng_browser = function () {
-  for (var i = 0, r; i &#x3c; 16; i++) {
-    if ((i &#x26; 0x03) === 0) r = Math.random() * 0x100000000;
-    rnds[i] = r &#x3e;&#x3e;&#x3e; ((i &#x26; 0x03) &#x3c;&#x3c; 3) &#x26; 0xff;
-  }
-
-  return rnds;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.uuid.toString" id="apidoc.element.uuid.toString">
-        function <span class="apidocSignatureSpan">uuid.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-/**
- * Convert array of 16 byte values to UUID string format of the form:
- * XXXXXXXX-XXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
- */
-var byteToHex = [];
-for (var i = 0; i &#x3c; 256; ++i) {
-byteToHex[i] = (i + 0x100).<span class="apidocCodeKeywordSpan">toString</span>(16).substr(1);
-}
-
-function bytesToUuid(buf, offset) {
-var i = offset || 0;
-var bth = byteToHex;
-return  bth[buf[i++]] + bth[buf[i++]] +
-        bth[buf[i++]] + bth[buf[i++]] + &#x27;-&#x27; +
-...</pre></li>
     </ul>
 
 
@@ -481,120 +312,66 @@ uuid.<span class="apidocCodeKeywordSpan">v4</span>(); // -&#x3e; v4 UUID
 </div>
 
 <div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.uuid.bytesToUuid" id="apidoc.module.uuid.bytesToUuid">module uuid.bytesToUuid</a></h1>
+<h1><a href="#apidoc.module.uuid.v4" id="apidoc.module.uuid.v4">module uuid.v4</a></h1>
 
 
     <h2>
-        <a href="#apidoc.element.uuid.bytesToUuid.bytesToUuid" id="apidoc.element.uuid.bytesToUuid.bytesToUuid">
-        function <span class="apidocSignatureSpan">uuid.</span>bytesToUuid
-        <span class="apidocSignatureSpan">(buf, offset)</span>
+        <a href="#apidoc.element.uuid.v4.v4" id="apidoc.element.uuid.v4.v4">
+        function <span class="apidocSignatureSpan">uuid.</span>v4
+        <span class="apidocSignatureSpan">(options, buf, offset)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function bytesToUuid(buf, offset) {
-  var i = offset || 0;
-  var bth = byteToHex;
-  return  bth[buf[i++]] + bth[buf[i++]] +
-          bth[buf[i++]] + bth[buf[i++]] + &#x27;-&#x27; +
-          bth[buf[i++]] + bth[buf[i++]] + &#x27;-&#x27; +
-          bth[buf[i++]] + bth[buf[i++]] + &#x27;-&#x27; +
-          bth[buf[i++]] + bth[buf[i++]] + &#x27;-&#x27; +
-          bth[buf[i++]] + bth[buf[i++]] +
-          bth[buf[i++]] + bth[buf[i++]] +
-          bth[buf[i++]] + bth[buf[i++]];
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
+    <li>description and source-code<pre class="apidocCodePre">function v4(options, buf, offset) {
+  var i = buf &#x26;&#x26; offset || 0;
 
+  if (typeof(options) == &#x27;string&#x27;) {
+    buf = options == &#x27;binary&#x27; ? new Array(16) : null;
+    options = null;
+  }
+  options = options || {};
 
-</div>
+  var rnds = options.random || (options.rng || rng)();
 
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.uuid.rng" id="apidoc.module.uuid.rng">module uuid.rng</a></h1>
+  // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+  rnds[6] = (rnds[6] &#x26; 0x0f) | 0x40;
+  rnds[8] = (rnds[8] &#x26; 0x3f) | 0x80;
 
-
-    <h2>
-        <a href="#apidoc.element.uuid.rng.rng" id="apidoc.element.uuid.rng.rng">
-        function <span class="apidocSignatureSpan">uuid.</span>rng
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function rng() {
-  return rb(16);
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.uuid.rng_browser" id="apidoc.module.uuid.rng_browser">module uuid.rng_browser</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.uuid.rng_browser.rng_browser" id="apidoc.element.uuid.rng_browser.rng_browser">
-        function <span class="apidocSignatureSpan">uuid.</span>rng_browser
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">rng_browser = function () {
-  for (var i = 0, r; i &#x3c; 16; i++) {
-    if ((i &#x26; 0x03) === 0) r = Math.random() * 0x100000000;
-    rnds[i] = r &#x3e;&#x3e;&#x3e; ((i &#x26; 0x03) &#x3c;&#x3c; 3) &#x26; 0xff;
+  // Copy bytes to buffer, if provided
+  if (buf) {
+    for (var ii = 0; ii &#x3c; 16; ++ii) {
+      buf[i + ii] = rnds[ii];
+    }
   }
 
-  return rnds;
+  return buf || bytesToUuid(rnds);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.uuid.toString" id="apidoc.module.uuid.toString">module uuid.toString</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.uuid.toString.toString" id="apidoc.element.uuid.toString.toString">
-        function <span class="apidocSignatureSpan">uuid.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
+Browser-ready versions of this module are available via [wzrd.in](https://github.com/jfhbrook/wzrd.in).
 
-/**
- * Convert array of 16 byte values to UUID string format of the form:
- * XXXXXXXX-XXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
- */
-var byteToHex = [];
-for (var i = 0; i &#x3c; 256; ++i) {
-byteToHex[i] = (i + 0x100).<span class="apidocCodeKeywordSpan">toString</span>(16).substr(1);
-}
+```html
+&#x3c;script src=&#x22;http://wzrd.in/standalone/uuid@latest&#x22;&#x3e;&#x3c;/script&#x3e;
 
-function bytesToUuid(buf, offset) {
-var i = offset || 0;
-var bth = byteToHex;
-return  bth[buf[i++]] + bth[buf[i++]] +
-        bth[buf[i++]] + bth[buf[i++]] + &#x27;-&#x27; +
+&#x3c;script&#x3e;
+uuid.v1(); // -&#x3e; v1 UUID
+uuid.<span class="apidocCodeKeywordSpan">v4</span>(); // -&#x3e; v4 UUID
+&#x3c;/script&#x3e;
+```
+
+(Note: Do not do this in production.  Just don&#x27;t.  wzrd.in is a great service, but if you&#x27;re deploying a &#x22;real&#x22
+; service you should be using a packaging tool like browserify or webpack.  If you do go this route you would be well advised to
+ link to a specific version instead of `uuid@latest` to avoid having your code break when we roll out breaking changes.)
+
+
+## API
 ...</pre></li>
     </ul>
 
 
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.uuid.v1" id="apidoc.module.uuid.v1">module uuid.v1</a></h1>
-
 
     <h2>
-        <a href="#apidoc.element.uuid.v1.v1" id="apidoc.element.uuid.v1.v1">
-        function <span class="apidocSignatureSpan">uuid.</span>v1
+        <a href="#apidoc.element.uuid.v4.v1" id="apidoc.element.uuid.v4.v1">
+        function <span class="apidocSignatureSpan">uuid.v4.</span>v1
         <span class="apidocSignatureSpan">(options, buf, offset)</span>
         </a>
     </h2>
